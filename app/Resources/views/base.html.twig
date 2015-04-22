@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+        <!-- begin CSS -->
+        {% stylesheets
+            '%kernel.root_dir%/Resources/public/css/html5-reset.css'
+            '%kernel.root_dir%/Resources/public/css/flexslider.css'
+            '%kernel.root_dir%/Resources/public/css/tipsy.css'
+            '%kernel.root_dir%/Resources/public/css/jquery.fancybox.css'
+            '%kernel.root_dir%/Resources/public/css/smoothness/jquery-ui-1.10.1.custom.min.css'
+            '%kernel.root_dir%/Resources/public/css/shortcodes.css'
+            '%kernel.root_dir%/Resources/public/css/revslider.css'
+            '%kernel.root_dir%/Resources/public/css/responsive.css'
+            '%kernel.root_dir%/Resources/public/css/colors/green.css'
+            filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
+
+        {% block stylesheet %}
+
+        {%  endblock %}
+
+        {% stylesheets
+            '%kernel.root_dir%/Resources/public/css/colors/green.css'
+            filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
+        <link rel="stylesheet" href="{{ asset("bundles/icomoon/css/icomoon.css") }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+        
+    </head>
+    <body class="wide">
+        <div id="wrap">
+            {% block body %}{% endblock %}
+        </div>
+        {% javascripts
+            '%kernel.root_dir%/Resources/public/js/*'
+            '%kernel.root_dir%/Resources/public/js/jquery-1.8.2.min.js'
+            '%kernel.root_dir%/Resources/public/js/ie.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.easing.1.3.js'
+            '%kernel.root_dir%/Resources/public/js/modernizr.custom.js'
+            '%kernel.root_dir%/Resources/public/js/ddlevelsmenu.js'
+            '%kernel.root_dir%/Resources/public/js/tinynav.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.validate.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery-ui-1.10.1.custom.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.flexslider-min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.jcarousel.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.ui.totop.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.fitvids.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.tweet.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.gmap.min.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.tipsy.js'
+            '%kernel.root_dir%/Resources/public/js/jquery.fancybox.pack.js'
+            '%kernel.root_dir%/Resources/public/js/froogaloop.min.js'
+            '%kernel.root_dir%/Resources/public/js/custom.js'
+            '%kernel.root_dir%/Resources/public/js/revslider.jquery.themepunch.plugins.min.js'
+            '%kernel.root_dir%/Resources/public/js/revslider.jquery.themepunch.revolution.js'
+        %} 
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}    
+
+        <!-- begin JS -->
+    <script type="text/javascript"> <!-- drop-down menu -->
+        ddlevelsmenu.setup("nav", "topbar");
+    </script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script> <!-- Google maps -->
+    <!-- end JS -->
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

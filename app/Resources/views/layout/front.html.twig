@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheet %}
+    {% stylesheets
+    '%kernel.root_dir%/Resources/public/css/style.css'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {{ parent() }}
+{%  endblock %}
+
+{% block body %}
+    <div id="wrap">
+        {% include(":blocs:header.html.twig") %}
+
+        <!-- begin page title -->
+        <section id="page-title">
+            <div class="container clearfix">
+                <h1>{% block content_title %}{% endblock %}</h1>
+                {#<nav id="breadcrumbs">#}
+                {#<ul>#}
+                {#<li><a href="index-boxed.html">Accueil</a> &rsaquo;</li>#}
+                {#<!--<li><a href="about-us.html">Templates</a> &rsaquo;</li>-->#}
+                {#<li>A propos de nous</li>#}
+                {#</ul>#}
+                {#</nav>#}
+            </div>
+        </section>
+        <!-- begin page title -->
+        <section id="content" class="container clearfix">
+
+            {% block pageWrapper %} {% endblock %}
+        </section>
+
+        {% include(":blocs:footer.html.twig") %}
+    </div>
+{% endblock %}

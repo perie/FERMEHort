@@ -1,0 +1,14 @@
+xp_team:
+    resource: "@XPTeamBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+xp_team_admin:
+    resource: "@XPTeamBundle/Controller/Admin/"
+    type:     annotation
+    prefix:   /admin/
+
+mon_projet_mon:
+    resource: "@MonProjetMonBundle/Controller/"
+    type:     annotation
+    prefix:   /projet

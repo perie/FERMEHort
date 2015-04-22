@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    {% stylesheets
+    '%kernel.root_dir%/Resources/public/css/admin-style.css'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{%  endblock %}
+
+{% block body %}
+    {% include(":blocs:admin.header.html.twig") %}
+    <div id="admin-content">
+        <div id="sidebar">
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+            </ul>
+        </div>
+        <!-- begin page title -->
+        <div class="container clearfix">
+            <section id="content-title">
+                <div class="clearfix">
+                    <h2>
+                        <a href=""><i class="fa-lg icon-menu5"></i></a> {% block content_title %}{% endblock %}
+                    </h2>
+                </div>
+            </section>
+            <!-- begin page title -->
+            <section id="page-content" class="clearfix">
+
+                {% block pageWrapper %} {% endblock %}
+            </section>
+        </div>
+        {% include(":blocs:footer.html.twig") %}
+    </div>
+{% endblock %}

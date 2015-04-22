@@ -1,0 +1,211 @@
+{% extends ':layout:front.html.twig' %}
+
+{% block pageWrapper %}
+    <!-- begin slider -->
+    <section id="slider-home">
+        <div class="fullwidthbanner-container">
+            <div class="fullwidthbanner">
+                <ul>
+                    <!-- slide 1 -->
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="300">
+                        <!-- main image -->
+                        <img src="{{asset('images/slider/slides/1920x400/fromage-aromates-940x400.png')}}" alt=""> 
+                        
+                        <!-- captions -->
+                        <div class="tp-caption big colored sft"
+                             data-x="0"
+                             data-y="131"
+                             data-speed="1000" 
+                             data-start="1000" 
+                             data-easing="easeOutBack">
+                                Des fromages frais, nature ou aromatisé
+                        </div>
+                        
+                        <div class="tp-caption small black sft"
+                             data-x="0"
+                             data-y="178"
+                             data-speed="1000"
+                             data-start="1500"
+                             data-easing="easeOutBack">
+                                Des produits vendu sans intermédiaire, du producteur au consomateur.
+                        </div>
+                        
+                        <div class="tp-caption sfb"
+                             data-x="0"
+                             data-y="236"
+                             data-speed="1000"
+                             data-start="2000"
+                             data-easing="easeOutExpo">
+                                <a href="/fromages" class="button colored">En savoir plus</a>
+                        </div>
+                    </li>
+                    
+                    <!-- slide 2 -->
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="300">
+                        <!-- main image -->
+                        <img src="{{asset('images/slider/slides/1920x400/alimentation-naturelle-940x400.png')}}" alt=""> 
+                        
+                        <!-- captions -->
+                        <div class="tp-caption big black sfl"
+                             data-x="0"
+                             data-y="131"
+                             data-speed="1000" 
+                             data-start="1000" 
+                             data-easing="easeOutBack">
+                                Une nourriture saine, naturelle &amp; variés.
+                        </div>
+                        
+                        <div class="tp-caption small white sfr"
+                             data-x="0"
+                             data-y="178"
+                             data-speed="1000"
+                             data-start="1500"
+                             data-easing="easeOutBack">
+                                Nourrit en pleine garigues au milieu des vignes.
+                        </div>
+                        
+                        <div class="tp-caption sfb"
+                             data-x="0"
+                             data-y="236"
+                             data-speed="1000"
+                             data-start="2000"
+                             data-easing="easeOutExpo">
+                                <a href="#" class="button black">Découvrir notre environnement</a>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>		
+           </div>
+       </div>
+    </section>
+    <!-- end slider -->
+    
+    <!-- begin featured content -->
+    <!--<section>
+    	<div class="content-featured">
+            <div class="container">
+            	<p>Inceptio is a multi-purpose theme with a clean look, handy functionality and flexible customization possibilities. <a href="portfolio.html">Get Started &rsaquo;</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- end featured content -->
+           
+    <!-- begin content -->
+    <section id="content" class="container clearfix">
+    
+        <!-- begin services -->
+        <section>
+        	<div class="one-fourth">
+                <div class="iconbox icon-top">
+                    <a href="services.html#digital-art">
+                    	<div class="iconbox-icon"><img src="{{asset('images/icon-boxes/128x128/Goats_milk_128x128.png')}}" alt="Un lait de qualité"></div>
+                        <h2 class="iconbox-title">Un lait de qualité</h2>
+                        <p>Elevé principalement en plein air, au coeur d'une garrigue, riche en fibre et minéraux, nos chêvres produisent un lait naturel et complet. Ce lait nous permet de produire un fromage de qualité qui ravira vos papilles.</p>
+                        <!--<p class="call-to-action"><strong>Save up to $100 instantly</strong></p>-->
+                        <span class="button">En savoir plus</span>
+                    	<div class="arrow-box-hover"></div>
+                    </a>
+                </div>
+           </div>
+           
+           <div class="one-fourth">     
+                <div class="iconbox icon-top">
+                    <a href="?context=nosfromages">
+                    	<div class="iconbox-icon"><img src="{{asset('images/icon-boxes/128x128/Goat_Cheese.png')}}" alt="Vector Art"></div>
+                        <h2 class="iconbox-title">Une gamme variés</h2>
+                        <p>Nous vous proposons une gamme de produit variés. Des fromages plus ou moins affiné, avec ou sans aromates</br></br></br></p>
+                        <!--<p class="call-to-action"><strong>All icon bundle at only $99</strong></p>-->
+                        <span class="button">Voir toute la gamme</span>
+                    	<div class="arrow-box-hover"></div>
+                    </a>
+                </div>
+            </div>
+            
+           <div class="one-fourth">     
+                <div class="iconbox icon-top">
+                    <a href="services.html#programming">
+                    	<div class="iconbox-icon"><img src="{{asset('images/icon-boxes/128x128/Fabrication-française.png')}}" alt="Programming"></div>
+                        <h2 class="iconbox-title">Un produit Français</h2>
+                        <p>Nos produit sont produit en France à  Argeliers (Hérault). Nos chêvres se nourrissent en pleine nature, et recoivent à  l&rsquo;occasion du foin en provenance du Tarn.</p>
+                        <!--<p class="call-to-action"><strong>En savoir plus</strong></p>-->
+                        <span class="button">En savoir plus</span>
+                    	<div class="arrow-box-hover"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="one-fourth column-last">     
+                <div class="iconbox icon-top">
+                    <a href="services.html#photography">
+                    	<div class="iconbox-icon"><img src="{{asset('images/icon-boxes/128x128/photography_128x128.png')}}" alt="Photography"></div>
+                        <h2 class="iconbox-title">Photography</h2>
+                        <p>Mauris pretium libero sit amet erat fringilla ut molestie sem accumsan. Nunc eu nibh diam, quis commodo diam curabitur.</p>
+                        <p class="call-to-action"><strong>Stock photo bundle at only $49</strong></p>
+                        <span class="button">Learn More</span>
+                    	<div class="arrow-box-hover"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+        </section>
+        <!-- end services -->
+        
+		<!-- begin : On parle de nous-->
+		<section>
+			<div class="one-third">
+			<h1>Vos commentaires</h1>
+                <blockquote class="speech-bubble">
+                    <div class="quote-content">
+                        <p>Bonjour três intéressé par le principe du parrainage . amoureuse des animaux et du fromage du chêvre en particulier . je suis sur Narbonne et souhaiterais vous rendre visite . en parrainant une chêvre peut on n'acheter que des fromages natures pas de faisselle ou agrémenter d'aromates ? 
+						<br/>Cordialement.</p>
+                        <span class="quote-arrow"></span>
+                    </div>
+                    <div class="quote-meta author-female"><strong>Nathalie</strong>, le 12 Mars 2014<br>
+                        <!--<span>Company</span>-->
+                    </div>
+                </blockquote>
+			</div>
+			
+			<div class="two-thirds">
+				<h1>La presse en parle &nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="font-size:10pt;">(Voir tout les articles)</a></h1>
+				<section name="Article 1">
+					<div class="infobox">
+						<div class="infobox-inner">
+							<!--<a class="button large" href="#">Lire l'article</a>-->
+							<a class="button large entry-image lightbox" href="{{asset('images/Presse/Article/Paysan du midi-mai 2012.jpg')}}" title="Paysan du midi : Trophée installations 2011">Lire l'article</a>
+							<div class="with-button">
+								<div class="entry-image alignleft"><img src="{{asset('images/Presse/Paysan du midi.png')}}" style="height:45px;"alt="" title="Image Title"/></div>
+								<h2>Trophée installations 2011</h2>
+								<p>Publiê le 11 Mai 2012</p>
+							</div>
+							<a class="button large mobile-button" href="#">Lire l'article</a>
+							
+						</div>
+					</div><!--
+				</section>
+				<section name="Article 2">-->
+					<div class="infobox">
+						<div class="infobox-inner">
+							<!--<a class="button large" href="#">Lire l'article</a>-->
+							<a class="button large entry-image lightbox" href="{{asset('images/Presse/Article/la chêvre-309.jpg')}}" title="La chêvre, numéro 309 de Mars Avril 2012 : Deux ex-ingénieur font parrainer leur chêvres à  la ferme de l'Hort" alt="La chêvre, numéro 309 de Mars Avril 2012 : Deux ex-ingénieur font parrainer leur chêvres à  la ferme de l'Hort">Lire l'article</a>
+							<div class="with-button">
+								<div class="entry-image alignleft"><img src="{{asset('images/Presse/LaChevre.jpg')}}" style="height:45px;"alt="" title="Image Title"/></div>
+								<h2>Deux ex-ingénieur font parrainer leur chêvres</h2>
+								<p>Edition 309, Mars/Avril 2012</p>
+							</div>
+							<a class="button large mobile-button" href="#">Lire l'article</a>
+							
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!-- End : On parle de nous-->
+		
+    </section>
+    <!-- end content -->  
+
+{% endblock %}
+

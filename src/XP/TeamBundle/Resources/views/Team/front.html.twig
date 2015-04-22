@@ -1,0 +1,63 @@
+{% set context="apropos" %}
+
+{% extends ':layout:front.html.twig' %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    {% stylesheets
+        'bundles/XPTeam/css/*'
+        'bundles/XPTeam/css/team.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content_title %}Notre équipe{% endblock %}
+
+{% block pageWrapper %}
+
+    {%  for team in teams %}
+        <!-- begin our team -->
+        <section>
+            {% if loop.length > 1 %}
+                <h2>{{ team.teamName }}</h2>
+            {% endif %}
+            {% if team.descriptions != "" %}
+                <p>{{ team.descriptions }}</p>
+            {% endif %}
+
+            {%  for member in team.members %}
+                <div class="one-fourth">
+                    <div class="team-member">
+                        <div class="photo">
+                            {% if member.avatar != null %}
+                                <img class="photo avatar" src="{{ asset(member.avatar.WebPath) }}" alt="Team Member">
+                            {% elseif member.sex=="W" %}
+                                <img class="photo avatar" src="{{ asset("images/team/woman-avatar.jpg") }}" alt="Team Member">
+                            {% else %}
+                                <img class="photo avatar" src="{{ asset("images/team/no-avatar.jpg") }}" alt="Team Member">
+                            {%  endif %}
+                        </div>
+                        <div class="content">
+                            <h3 class="name">{{ member.completename }}</h3>
+                            <span class="job-title">{{ member.fonction }}</span>
+                            <ul class="social-links">
+                                {% for social in member.socials %}
+                                    <li class="{{ social.name }}"><a href="{{ social.value }}" title="{{ social.name }}" target="_blank">{{ social.name }}</a></li>
+                                {%  else %}
+                                    <li>&nbsp;</li>
+                                {%  endfor %}
+                            </ul>
+                            <p>{{ member.descriptions }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor  %}
+            <div class="clear"></div>
+        </section>
+        <!-- end our team -->
+    {%  else %}
+        <p> Il n'y a pas d'équipes</p>
+    {%  endfor %}
+{% endblock %}
+
